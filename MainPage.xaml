@@ -5,7 +5,24 @@
              x:Class="MauiApp1.MainPage">
 
     <Grid>
-        <Label x:Name="CrashLabel" FontFamily="GilroyLight" FontSize="14" FormattedText="{Binding FormattedString}" Margin="16,0" />
+        <Label FontSize="14" Margin="16,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span
+                        Text="A culture of continuous learning isn't something you can ignore. 76% of employees are more inclined to stay when their workplace offers learning and development 🤔 Here's a few ways you can foster this:🧠 Create channels to encourage knowledge sharing between team members👏 Provide learning opportunities like job shadowing and rotation for hands-on experiences💬 Integrate routine feedback as a celebrated part of the workflow💻 Encourage your teams to dive into digital learning and live events Take a look at some more methods you can adopt from this recent article in Forbes 👇 🔗 "
+                        FontFamily="OpenSansRegular" />
+                    <Span
+                        Text="Just a long link to https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?view=net-maui-8.0"
+                        x:Name="LinkSpan"
+                        FontFamily="OpenSansRegular"
+                        TextDecorations="Underline">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSpanTap" />
+                        </Span.GestureRecognizers>
+                    </Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
     </Grid>
 
 </ContentPage>
